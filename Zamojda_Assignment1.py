@@ -20,7 +20,7 @@ def powerset(set):
   return new_list
 
 #Permutations
-def permutations(set):
+def all_perms(set):
 	if len(set)>0:
  		lis1 = []
  		lis2 = [] 
@@ -28,7 +28,7 @@ def permutations(set):
  			if item not in lis1:
  				temp = set[:] 
  				temp.remove(item)
- 				for p in permutations(temp):
+ 				for p in all_perms(temp):
  					lis2.append([item]+p)
  			lis1.append(item)
  		return lis2
